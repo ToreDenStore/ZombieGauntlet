@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float Speed = 1;
+    public float Speed;
+    private CharacterController _controller;
 
     // Start is called before the first frame update
     void Start()
     {
-            
+        _controller = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -20,11 +21,6 @@ public class PlayerController : MonoBehaviour
 
         Vector3 movement = new Vector3(moveHorizontal * Time.deltaTime * Speed, 0.0f, moveVertical * Time.deltaTime * Speed);
 
-        transform.Translate(movement);
-    }
-
-    void FixedUpdate()
-    {
-
+        _controller.SimpleMove(movement);
     }
 }
