@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc02d9c583ce2ac43a77e12785309827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shotExplosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 3}
 --- !u!1 &4115769912082746265
 GameObject:
   m_ObjectHideFlags: 0

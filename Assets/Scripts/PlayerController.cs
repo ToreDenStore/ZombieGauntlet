@@ -40,10 +40,8 @@ public class PlayerController : MonoBehaviour
         Vector3 direction = new Vector3 (
                 mousePosition.x - transform.position.x,
                 0,
-                //mousePosition.y - transform.position.y,
                 mousePosition.z - transform.position.z
         );
-        
         transform.forward = direction;
 
         //Movement
