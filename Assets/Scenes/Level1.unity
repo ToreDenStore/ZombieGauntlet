@@ -839,7 +839,6 @@ GameObject:
   - component: {fileID: 774960801}
   - component: {fileID: 774960796}
   - component: {fileID: 774960797}
-  - component: {fileID: 774960802}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -872,7 +871,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 774960795}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1034,27 +1033,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 6
-  shot: {fileID: 4115769911999123952, guid: 6fe4e9bfc65afa7418725fe9c0c4715a, type: 3}
   gun: {fileID: 193698140}
   shotSpawn: {fileID: 242803669}
+  shotExplosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 3}
   fireRate: 0.25
   weaponRange: 50
-  shotExplosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 3}
---- !u!114 &774960802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 774960795}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65c5a3110c56f7a4a9936613ef928ad4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponRange: 50
-  gun: {fileID: 193698140}
-  mainCam: {fileID: 0}
 --- !u!1 &826286353
 GameObject:
   m_ObjectHideFlags: 0
