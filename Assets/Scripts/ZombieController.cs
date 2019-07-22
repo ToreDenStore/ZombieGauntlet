@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class ZombieController : MonoBehaviour
 {
-    private int hitPoints;
-
     private GameObject player;
 
+    public int hitPoints;
     public float zombieAlertDistance = 10f;
     public float zombieAttackDistance = 2f;
     public float zombieStopDistance = 1.5f;
@@ -54,5 +53,15 @@ public class ZombieController : MonoBehaviour
     {
         transform.forward = player.transform.position - transform.position;
         transform.forward.Set(transform.forward.x, 0, transform.forward.z);
+    }
+
+    public void DoDamageTo(int damage)
+    {
+        hitPoints -= damage;
+        if (hitPoints <= 0)
+        {
+            gameObject.SetActive(false);
+        }
+        print("hitpoints left: " + hitPoints);
     }
 }

@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 
     public float fireRate;
     public float weaponRange = 50f;
+    public int weaponDamage = 10;
 
     private float nextFire;
     private LineRenderer _laserLine;
@@ -92,6 +93,7 @@ public class PlayerController : MonoBehaviour
             {
                 _laserLine.SetPosition(1, hit.point);
                 StartCoroutine(HitEffect(hit));
+                DoDamage(hit.transform.gameObject, weaponDamage);
             }
             else
             {
@@ -112,5 +114,14 @@ public class PlayerController : MonoBehaviour
         GameObject explosion = Instantiate(shotExplosion, hit.point, hit.transform.rotation);
         yield return new WaitForSeconds(_explosionLifetime);
         Destroy(explosion);
+    }
+
+    private void DoDamage(GameObject target, int damage)
+    {
+        ZombieController zombie = target.GetComponent<ZombieController>();
+        if (zombie != null)
+        {
+            zombie.DoDamageTo(damage);
+        }
     }
 }

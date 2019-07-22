@@ -105,6 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 119eea66b5f6d594bba9d8da27bbb36c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitPoints: 40
   zombieAlertDistance: 10
   zombieAttackDistance: 2
   zombieStopDistance: 1.5
