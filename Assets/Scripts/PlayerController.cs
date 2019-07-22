@@ -6,8 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     public float Speed;
     private CharacterController _controller;
-    private Vector3 _cameraOffset;
     Vector3 mousePosition;
+    //Vector3 mousePosition2;
 
     //Shots
     public GameObject gun;
@@ -24,15 +24,17 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _controller = GetComponent<CharacterController>();
-        _cameraOffset = Camera.main.transform.position;
         _laserLine = GetComponent<LineRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) - _cameraOffset;
-
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //mousePosition2 = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+        print("mouse: " + mousePosition);
+        //print("mouse2: " + mousePosition2);
+        
         FaceMouse();
 
         Move();
@@ -62,6 +64,16 @@ public class PlayerController : MonoBehaviour
 
     void ShootGun()
     {
+        //Vector3 gunPositionViewport = Camera.main.ScreenToViewportPoint(shotSpawn.position);
+
+        //Vector3 gunDirection = mousePosition2 - gunPositionViewport;
+        Vector3 gunDirection = new Vector3(
+            mousePosition.x - shotSpawn.position.x,
+            0,
+            mousePosition.z - shotSpawn.position.z
+        );
+        print("gun direction: " + gunDirection);
+
         if ((Input.GetMouseButtonDown(0) || Input.GetMouseButton(0)) && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
@@ -71,15 +83,11 @@ public class PlayerController : MonoBehaviour
             RaycastHit hit;
             _laserLine.SetPosition(0, shotSpawn.position);
             Vector3 rayOrigin = shotSpawn.position;
-            Vector3 gunDirection = new Vector3(
-                mousePosition.x - shotSpawn.position.x,
-                0,
-                mousePosition.z - shotSpawn.position.z
-            );
+
             if (Physics.Raycast(rayOrigin, gunDirection, out hit, weaponRange))
             {
                 _laserLine.SetPosition(1, hit.point);
-                Instantiate(shotExplosion, hit.point, transform.rotation);
+                Instantiate(shotExplosion, hit.point, hit.transform.rotation);
             }
             else
             {
