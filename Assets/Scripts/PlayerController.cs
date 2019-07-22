@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     {
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //mousePosition2 = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-        print("mouse: " + mousePosition);
+        //print("mouse: " + mousePosition);
         //print("mouse2: " + mousePosition2);
         
         FaceMouse();
@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
                 0,
                 mousePosition.z - shotSpawn.position.z
             );
-            print("gun direction: " + gunDirection);
+            //print("gun direction: " + gunDirection);
             if (Physics.Raycast(rayOrigin, gunDirection, out hit, weaponRange))
             {
                 _laserLine.SetPosition(1, hit.point);
