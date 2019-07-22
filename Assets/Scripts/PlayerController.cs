@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     //Shots
     public GameObject gun;
+    public GameObject shotAudio;
     public Transform shotSpawn;
     public GameObject shotExplosion;
 
@@ -19,6 +20,9 @@ public class PlayerController : MonoBehaviour
 
     private float nextFire;
     private LineRenderer _laserLine;
+    private float _shotEffectLifetime = 2;
+    private float _explosionLifetime = 2;
+
 
     // Start is called before the first frame update
     void Start()
@@ -67,27 +71,27 @@ public class PlayerController : MonoBehaviour
         //Vector3 gunPositionViewport = Camera.main.ScreenToViewportPoint(shotSpawn.position);
 
         //Vector3 gunDirection = mousePosition2 - gunPositionViewport;
-        Vector3 gunDirection = new Vector3(
-            mousePosition.x - shotSpawn.position.x,
-            0,
-            mousePosition.z - shotSpawn.position.z
-        );
-        print("gun direction: " + gunDirection);
+        
 
         if ((Input.GetMouseButtonDown(0) || Input.GetMouseButton(0)) && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
 
-            //StartCoroutine(ShotEffect());
+            StartCoroutine(ShotEffect());
 
             RaycastHit hit;
             _laserLine.SetPosition(0, shotSpawn.position);
             Vector3 rayOrigin = shotSpawn.position;
-
+            Vector3 gunDirection = new Vector3(
+                mousePosition.x - shotSpawn.position.x,
+                0,
+                mousePosition.z - shotSpawn.position.z
+            );
+            print("gun direction: " + gunDirection);
             if (Physics.Raycast(rayOrigin, gunDirection, out hit, weaponRange))
             {
                 _laserLine.SetPosition(1, hit.point);
-                Instantiate(shotExplosion, hit.point, hit.transform.rotation);
+                StartCoroutine(HitEffect(hit));
             }
             else
             {
@@ -96,7 +100,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    //private IEnumerator ShotEffect()
-    //{
-    //}
+    private IEnumerator ShotEffect()
+    {
+        GameObject shotAudio = Instantiate(this.shotAudio);
+        yield return new WaitForSeconds(_shotEffectLifetime);
+        Destroy(shotAudio);
+    }
+
+    private IEnumerator HitEffect(RaycastHit hit)
+    {
+        GameObject explosion = Instantiate(shotExplosion, hit.point, hit.transform.rotation);
+        yield return new WaitForSeconds(_explosionLifetime);
+        Destroy(explosion);
+    }
 }

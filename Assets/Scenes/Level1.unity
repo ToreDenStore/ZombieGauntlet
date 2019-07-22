@@ -1034,6 +1034,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 6
   gun: {fileID: 193698140}
+  shotAudio: {fileID: 6789968279565048724, guid: aabb9d2c1b9aae84b9f8bf0615f9df69,
+    type: 3}
   shotSpawn: {fileID: 242803669}
   shotExplosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 3}
   fireRate: 0.25
