@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                _laserLine.SetPosition(1, rayOrigin + (transform.forward * weaponRange));
+                _laserLine.SetPosition(1, rayOrigin + (gunDirection * weaponRange));
             }
         }
     }
