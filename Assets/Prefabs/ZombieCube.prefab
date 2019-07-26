@@ -106,10 +106,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 40
-  zombieAlertDistance: 10
+  zombieAlertDistance: 15
   zombieAttackDistance: 2
   zombieStopDistance: 1.5
-  moveSpeed: 2
+  moveSpeed: 4
   attackRate: 1
   attackDamage: 10
 --- !u!54 &-6965274588206617433

@@ -22,8 +22,8 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
 
     private float nextFire;
     private LineRenderer _laserLine;
-    private float _shotEffectLifetime = 2;
-    private float _explosionLifetime = 2;
+    private static readonly float _shotEffectLifetime = 2;
+    private static readonly float _explosionLifetime = 2;
 
 
     // Start is called before the first frame update

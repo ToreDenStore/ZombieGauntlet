@@ -5,10 +5,10 @@ using UnityEngine;
 public class ZombieController : MonoBehaviour, IAttacks, IDestroyable
 {
     public int hitPoints;
-    public float zombieAlertDistance = 10f;
-    public float zombieAttackDistance = 2f;
-    public float zombieStopDistance = 1.5f;
-    public float moveSpeed = 10;
+    public float zombieAlertDistance;
+    public float zombieAttackDistance;
+    public float zombieStopDistance;
+    public float moveSpeed;
     public float attackRate;
     public int attackDamage;
 
