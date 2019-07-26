@@ -2318,9 +2318,10 @@ MonoBehaviour:
     type: 3}
   shotSpawn: {fileID: 242803669}
   shotExplosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 3}
-  fireRate: 0.25
-  weaponRange: 50
-  weaponDamage: 10
+  hitPoints: 100
+  fireRate: 0.5
+  weaponRange: 20
+  weaponDamage: 20
 --- !u!1 &826286353
 GameObject:
   m_ObjectHideFlags: 0

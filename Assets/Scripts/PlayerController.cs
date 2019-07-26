@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
 {
     public float Speed;
     private CharacterController _controller;
@@ -15,9 +15,10 @@ public class PlayerController : MonoBehaviour
     public Transform shotSpawn;
     public GameObject shotExplosion;
 
+    public int hitPoints;
     public float fireRate;
-    public float weaponRange = 50f;
-    public int weaponDamage = 10;
+    public float weaponRange;
+    public int weaponDamage;
 
     private float nextFire;
     private LineRenderer _laserLine;
@@ -93,7 +94,8 @@ public class PlayerController : MonoBehaviour
             {
                 _laserLine.SetPosition(1, hit.point);
                 StartCoroutine(HitEffect(hit));
-                DoDamage(hit.transform.gameObject, weaponDamage);
+
+                DoDamage(weaponDamage, hit.transform.gameObject.GetComponent<IDestroyable>());
             }
             else
             {
@@ -116,12 +118,23 @@ public class PlayerController : MonoBehaviour
         Destroy(explosion);
     }
 
-    private void DoDamage(GameObject target, int damage)
+    public void DoDamage(int damage, IDestroyable target)
     {
-        ZombieController zombie = target.GetComponent<ZombieController>();
-        if (zombie != null)
+        if (target != null)
         {
-            zombie.DoDamageTo(damage);
+            target.ReceiveDamage(damage);
         }
+    }
+
+    public void ReceiveDamage(int damage)
+    {
+        hitPoints -= damage;
+        if (hitPoints <= 0)
+        {
+            gameObject.SetActive(false);
+            //TODO End game:
+            print("YOU DIED!!");
+        }
+        print("hitpoints left: " + hitPoints);
     }
 }
