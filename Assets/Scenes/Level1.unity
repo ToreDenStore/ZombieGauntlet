@@ -831,7 +831,7 @@ Light:
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 0.5539618, g: 0.4762816, b: 0.7264151, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -3738,7 +3738,7 @@ Light:
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 0.31471944, g: 0.20906018, b: 0.5471698, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.25
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -6675,8 +6675,8 @@ Transform:
   m_Children:
   - {fileID: 1242233300}
   - {fileID: 1915946851}
-  - {fileID: 530015157}
   - {fileID: 1970430245}
+  - {fileID: 530015157}
   - {fileID: 263515892}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -8946,7 +8946,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 41aba79095f97cd43927b0a4c906b435, type: 2}
+  - {fileID: 2100000, guid: 43f38029a9368894a9fb4dd19ce0bfcd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8986,7 +8986,7 @@ Transform:
   m_LocalScale: {x: 30, y: 1, z: 20}
   m_Children: []
   m_Father: {fileID: 1435444476}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1997772097
 GameObject:
