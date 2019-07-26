@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
     public int weaponDamage;
 
     private float nextFire;
-    private LineRenderer _laserLine;
+    //private LineRenderer _laserLine;
     private static readonly float _shotEffectLifetime = 2;
     private static readonly float _explosionLifetime = 2;
 
@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
     void Start()
     {
         _controller = GetComponent<CharacterController>();
-        _laserLine = GetComponent<LineRenderer>();
+        //_laserLine = GetComponent<LineRenderer>();
     }
 
     // Update is called once per frame
@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
             StartCoroutine(ShotEffect());
 
             RaycastHit hit;
-            _laserLine.SetPosition(0, shotSpawn.position);
+            //_laserLine.SetPosition(0, shotSpawn.position);
             Vector3 rayOrigin = shotSpawn.position;
             Vector3 gunDirection = new Vector3(
                 mousePosition.x - shotSpawn.position.x,
@@ -92,14 +92,14 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
             //print("gun direction: " + gunDirection);
             if (Physics.Raycast(rayOrigin, gunDirection, out hit, weaponRange))
             {
-                _laserLine.SetPosition(1, hit.point);
+                //_laserLine.SetPosition(1, hit.point);
                 StartCoroutine(HitEffect(hit));
 
                 DoDamage(weaponDamage, hit.transform.gameObject.GetComponent<IDestroyable>());
             }
             else
             {
-                _laserLine.SetPosition(1, rayOrigin + (gunDirection * weaponRange));
+                //_laserLine.SetPosition(1, rayOrigin + (gunDirection * weaponRange));
             }
         }
     }

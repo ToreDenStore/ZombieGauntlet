@@ -28,6 +28,7 @@ public class ZombieController : MonoBehaviour, IAttacks, IDestroyable
         if (Vector3.Distance(transform.position, player.transform.position) < zombieAlertDistance)
         {
             TurnTowardsPlayer();
+            //TODO: Alert nearby zombie companions
             //Move
             if (Vector3.Distance(transform.position, player.transform.position) > zombieStopDistance)
             {
