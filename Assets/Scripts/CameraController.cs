@@ -31,11 +31,11 @@ public class CameraController : MonoBehaviour
     void LateUpdate()
     {
         //Base
-        //transform.position = player.transform.position + offset;
+        transform.position = player.transform.position + offset;
 
         if (player.transform.position != lastPlayerPosition)
         {
-            moveCamera();
+            //moveCamera();
             lastPlayerPosition = player.transform.position;
         }
     }
