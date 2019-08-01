@@ -35,10 +35,10 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 0.26
+  m_ReflectionIntensity: 0.113
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.23389184, g: 0.26212612, b: 0.30287078, a: 0.26}
+  m_IndirectSpecularColor: {r: 0.14914829, g: 0.16910031, b: 0.19789293, a: 0.113}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3163,6 +3163,8 @@ MonoBehaviour:
   player: {fileID: 1425060492}
   cameraXOffsetMax: 5
   cameraZOffsetMax: 5
+  cameraMoveSpeedX: 2
+  cameraMoveSpeedZ: 2
 --- !u!1001 &538912225
 PrefabInstance:
   m_ObjectHideFlags: 0
