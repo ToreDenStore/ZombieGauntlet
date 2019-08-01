@@ -3161,10 +3161,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1425060492}
-  cameraXOffsetMax: 5
-  cameraZOffsetMax: 5
-  cameraMoveSpeedX: 2
-  cameraMoveSpeedZ: 2
+  cameraXOffsetMax: 4
+  cameraZOffsetMax: 2
+  cameraMoveSpeedX: 1.5
+  cameraMoveSpeedZ: 1.5
 --- !u!1001 &538912225
 PrefabInstance:
   m_ObjectHideFlags: 0

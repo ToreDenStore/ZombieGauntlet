@@ -35,74 +35,60 @@ public class CameraController : MonoBehaviour
 
         if (player.transform.position != lastPlayerPosition)
         {
-            print("player is moving");
-
-            bool playerIsMovingRight = (player.transform.position.x > lastPlayerPosition.x);
-            bool playerIsMovingLeft = (player.transform.position.x < lastPlayerPosition.x);
-
-            float playerPositionX = player.transform.position.x;
-            float cameraPositionX = transform.position.x;
-
-            if (playerIsMovingRight && (cameraPositionX - playerPositionX) <= cameraXOffsetMax)
-            {
-                print("move camera to the right");
-                transform.position = new Vector3(
-                    transform.position.x + (player.transform.position.x - lastPlayerPosition.x) * cameraMoveSpeedX,
-                    transform.position.y,
-                    transform.position.z
-                );
-            } else if (playerIsMovingLeft && (cameraPositionX - playerPositionX) >= -cameraXOffsetMax)
-            {
-                print("move camera to the left");
-                transform.position = new Vector3(
-                    transform.position.x + (player.transform.position.x - lastPlayerPosition.x) * cameraMoveSpeedX,
-                    transform.position.y,
-                    transform.position.z
-                );
-            }
-            else
-            {
-                transform.position = new Vector3(
-                    transform.position.x + player.transform.position.x - lastPlayerPosition.x,
-                    transform.position.y,
-                    transform.position.z
-                );
-            }
-
-            bool playerIsMovingUp = (player.transform.position.z > lastPlayerPosition.z);
-            bool playerIsMovingDown = (player.transform.position.z < lastPlayerPosition.z);
-
-            float playerPositionZ = player.transform.position.z;
-            float cameraPositionZ = transform.position.z;
-
-            if (playerIsMovingUp && (cameraPositionZ - playerPositionZ) <= cameraZOffsetMax)
-            {
-                transform.position = new Vector3(
-                    transform.position.x,
-                    transform.position.y,
-                    transform.position.z + (player.transform.position.z - lastPlayerPosition.z) * cameraMoveSpeedZ
-                );
-            } else if (playerIsMovingDown && (cameraPositionZ - playerPositionZ) >= -cameraZOffsetMax)
-            {
-                transform.position = new Vector3(
-                    transform.position.x,
-                    transform.position.y,
-                    transform.position.z + (player.transform.position.z - lastPlayerPosition.z) * cameraMoveSpeedZ
-                );
-            }
-            else
-            {
-                transform.position = new Vector3(
-                    transform.position.x,
-                    transform.position.y,
-                    transform.position.z + player.transform.position.z - lastPlayerPosition.z
-                );
-            }
-
+            moveCamera();
             lastPlayerPosition = player.transform.position;
-        } else
+        }
+    }
+
+    private void moveCamera()
+    {
+        bool playerIsMovingRight = (player.transform.position.x > lastPlayerPosition.x);
+        bool playerIsMovingLeft = (player.transform.position.x < lastPlayerPosition.x);
+
+        float playerPositionX = player.transform.position.x;
+        float cameraPositionX = transform.position.x;
+
+        if ((playerIsMovingRight && (cameraPositionX - playerPositionX) <= cameraXOffsetMax)
+            || (playerIsMovingLeft && (cameraPositionX - playerPositionX) >= -cameraXOffsetMax))
         {
-            print("player is not moving");
+            //print("move camera to the right or left");
+            transform.position = new Vector3(
+                transform.position.x + (player.transform.position.x - lastPlayerPosition.x) * cameraMoveSpeedX,
+                transform.position.y,
+                transform.position.z
+            );
+        }
+        else
+        {
+            transform.position = new Vector3(
+                transform.position.x + player.transform.position.x - lastPlayerPosition.x,
+                transform.position.y,
+                transform.position.z
+            );
+        }
+
+        bool playerIsMovingUp = (player.transform.position.z > lastPlayerPosition.z);
+        bool playerIsMovingDown = (player.transform.position.z < lastPlayerPosition.z);
+
+        float playerPositionZ = player.transform.position.z;
+        float cameraPositionZ = transform.position.z;
+
+        if ((playerIsMovingUp && (cameraPositionZ - playerPositionZ) <= cameraZOffsetMax)
+            || (playerIsMovingDown && (cameraPositionZ - playerPositionZ) >= -cameraZOffsetMax))
+        {
+            transform.position = new Vector3(
+                transform.position.x,
+                transform.position.y,
+                transform.position.z + (player.transform.position.z - lastPlayerPosition.z) * cameraMoveSpeedZ
+            );
+        }
+        else
+        {
+            transform.position = new Vector3(
+                transform.position.x,
+                transform.position.y,
+                transform.position.z + player.transform.position.z - lastPlayerPosition.z
+            );
         }
     }
 }
