@@ -9,15 +9,20 @@ public class FieldOfView : MonoBehaviour
     [Range(0, 360)]
     public float viewAngle;
     public LayerMask obstacleMask;
+    public MeshFilter viewMeshFilter;
+
+    private Mesh viewMesh;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        viewMesh = new Mesh();
+        viewMesh.name = "View Mesh";
+        viewMeshFilter.mesh = viewMesh;
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         DrawFieldOfView();
     }
@@ -38,6 +43,29 @@ public class FieldOfView : MonoBehaviour
 
             //print("Drawing line from " + transform.position + " to " + transform.position + DirFromAngle(angle, true) * viewRadius);
         }
+
+        int vertexCount = viewPoints.Count + 1; //1 extra for origin point
+        Vector3[] vericies = new Vector3[vertexCount];
+        int[] triangles = new int[(vertexCount - 2) * 3]; //the view trangles that together constructs the sight
+
+        vericies[0] = Vector3.zero;
+        for (int i = 0; i < vertexCount - 1; i++)
+        {
+            vericies[i + 1] = transform.InverseTransformPoint(viewPoints[i]);
+
+            if (i < vertexCount - 2)
+            {
+                //012034056...
+                triangles[i * 3] = 0;
+                triangles[i * 3 + 1] = i + 1;
+                triangles[i * 3 + 2] = i + 2;
+            }
+        }
+
+        viewMesh.Clear();
+        viewMesh.vertices = vericies;
+        viewMesh.triangles = triangles;
+        viewMesh.RecalculateNormals();
     }
 
     public Vector3 DirFromAngle(float angleInDegrees, bool angleIsGlobal)
