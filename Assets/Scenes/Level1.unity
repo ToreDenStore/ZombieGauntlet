@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 10133767}
   - component: {fileID: 10133766}
   - component: {fileID: 10133765}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall_Z_-240_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,6 +314,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -463,6 +468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building_Apartment (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -526,6 +535,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -600,6 +614,10 @@ PrefabInstance:
     - target: {fileID: 1902742491923462, guid: b3d0e1c692a75b34d96fb84c9b431b64, type: 3}
       propertyPath: m_Name
       value: rock01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902742491923462, guid: b3d0e1c692a75b34d96fb84c9b431b64, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4991001240701050, guid: b3d0e1c692a75b34d96fb84c9b431b64, type: 3}
       propertyPath: m_LocalPosition.x
@@ -695,7 +713,7 @@ GameObject:
   - component: {fileID: 153861831}
   - component: {fileID: 153861830}
   - component: {fileID: 153861829}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall_X_-215_-60
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -786,6 +804,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -860,6 +883,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree Variant (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -1033,6 +1061,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1107,6 +1140,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree Variant (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -1183,6 +1221,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree Variant (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1258,7 +1301,7 @@ GameObject:
   - component: {fileID: 218995327}
   - component: {fileID: 218995326}
   - component: {fileID: 218995325}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall_X_-40_-10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1349,6 +1392,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1424,6 +1472,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree Variant (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1498,6 +1551,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree Variant (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -1646,7 +1704,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 263515892}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Houses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1814,6 +1872,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock01
       objectReference: {fileID: 0}
+    - target: {fileID: 1902742491923462, guid: b3d0e1c692a75b34d96fb84c9b431b64, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4991001240701050, guid: b3d0e1c692a75b34d96fb84c9b431b64, type: 3}
       propertyPath: m_LocalPosition.x
       value: -34.291878
@@ -1877,6 +1939,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -2102,6 +2169,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -2344,6 +2416,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2418,6 +2495,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree Variant (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -2494,6 +2576,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree Variant (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2567,6 +2654,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 601b00ca0b9de0247beae089ec7e640f, type: 3}
       propertyPath: m_Name
       value: Building_PizzaShop
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 601b00ca0b9de0247beae089ec7e640f, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 601b00ca0b9de0247beae089ec7e640f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2825,7 +2916,7 @@ GameObject:
   - component: {fileID: 452602543}
   - component: {fileID: 452602542}
   - component: {fileID: 452602541}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall_Z_-90_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2916,7 +3007,7 @@ GameObject:
   - component: {fileID: 510650170}
   - component: {fileID: 510650169}
   - component: {fileID: 510650168}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall_X_-115_90
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3011,6 +3102,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
       propertyPath: m_Name
       value: Building_Apartment
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3177,6 +3272,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3252,6 +3352,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree Variant (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3326,6 +3431,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building_Apartment (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3395,6 +3504,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -3470,6 +3584,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building_Apartment
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 25.9
@@ -3533,6 +3651,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree Variant (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -3609,6 +3732,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3683,6 +3811,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree Variant (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -3999,6 +4132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: oakTree
       objectReference: {fileID: 0}
+    - target: {fileID: 1377331622712542, guid: b9eb627f7bb4c1748829f3f01ce72b68, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4912536897705504, guid: b9eb627f7bb4c1748829f3f01ce72b68, type: 3}
       propertyPath: m_LocalPosition.x
       value: -35
@@ -4062,6 +4199,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree Variant (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -4137,6 +4279,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree Variant (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -4380,6 +4527,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree Variant (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4452,7 +4604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 826286354}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: X_Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4488,6 +4640,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -4564,6 +4721,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree Variant (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4638,6 +4800,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree Variant (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -4714,6 +4881,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4788,6 +4960,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -5106,6 +5283,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building_Apartment
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 25.9
@@ -5169,6 +5350,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -5245,6 +5431,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree Variant (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5317,7 +5508,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1042280896}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Z_Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5353,6 +5544,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -5504,6 +5700,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree Variant (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5645,7 +5846,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1146666098}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Green houses 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5681,6 +5882,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree Variant (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -5756,6 +5962,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building_Apartment (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.799999
@@ -5819,6 +6029,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree Variant (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -5899,6 +6114,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
       propertyPath: m_Name
       value: Building_Apartment (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6036,7 +6255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1242233300}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Forests
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6070,6 +6289,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -6146,6 +6370,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree Variant (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6220,6 +6449,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -6296,6 +6530,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree Variant (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6371,6 +6610,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree Variant (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6445,6 +6689,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building_Apartment (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.799999
@@ -6508,6 +6756,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree Variant (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -6582,6 +6835,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
       propertyPath: m_Name
       value: Building_Apartment (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6865,7 +7122,7 @@ MonoBehaviour:
   viewAngle: 120
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   viewMeshFilter: {fileID: 1494012276}
 --- !u!1 &1435444475
 GameObject:
@@ -6913,6 +7170,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree Variant (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -6986,7 +7248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1467969205}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Green houses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7022,6 +7284,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree Variant (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -7247,7 +7514,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1501367599}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SW forest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7411,6 +7678,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building_Apartment (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.3
@@ -7550,6 +7821,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7624,6 +7900,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -7725,6 +8006,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree Variant (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7800,6 +8086,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7874,6 +8165,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -8094,7 +8390,7 @@ GameObject:
   - component: {fileID: 1704656450}
   - component: {fileID: 1704656449}
   - component: {fileID: 1704656448}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall_X_-140_40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8260,7 +8556,7 @@ GameObject:
   - component: {fileID: 1714561495}
   - component: {fileID: 1714561494}
   - component: {fileID: 1714561493}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall_Z_-190_-10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8425,6 +8721,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1902742491923462, guid: b3d0e1c692a75b34d96fb84c9b431b64, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4991001240701050, guid: b3d0e1c692a75b34d96fb84c9b431b64, type: 3}
       propertyPath: m_LocalPosition.x
       value: -33.350304
@@ -8487,6 +8787,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
       propertyPath: m_Name
       value: Building_Apartment (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8627,6 +8931,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree Variant (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8702,6 +9011,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8776,6 +9090,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building_Apartment (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6aad3078276ab4d47916c4d88e1722cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -8837,7 +9155,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1915946851}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8871,6 +9189,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree Variant (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -8944,7 +9267,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1919072410}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Green houses 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8980,6 +9303,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree Variant (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -9055,6 +9383,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree Variant (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -9298,7 +9631,7 @@ GameObject:
   - component: {fileID: 1997772101}
   - component: {fileID: 1997772100}
   - component: {fileID: 1997772099}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall_Z_10_40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9389,6 +9722,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pineTree Variant (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9463,6 +9801,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -9680,7 +10023,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2123962173}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: OakTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9716,6 +10059,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree Variant (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
@@ -9865,6 +10213,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: pineTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459707437460401326, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8459707437460041870, guid: ba7ea416c813b8c4c8d8f5f4fb668cb3,
         type: 3}
