@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
 {
+    public GameObject healthBar;
     public float Speed;
+    public int hitPointsInitial;
+
+    private int hitPointsLeft;
+    private RectTransform healthBarRect;
     private CharacterController _controller;
-    Vector3 mousePosition;
-    //Vector3 mousePosition2;
+    private Vector3 mousePosition;
     private AudioSource footstepAudioSource;
-    Vector3 lastPosition;
-    bool isMoving = false;
+    private Vector3 lastPosition;
+    private bool isMoving = false;
+    //private float healthBarInitialSize;
 
     //Shots
     public GameObject gun;
@@ -18,7 +23,6 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
     public Transform shotSpawn;
     public GameObject shotExplosion;
 
-    public int hitPoints;
     public float fireRate;
     public float weaponRange;
     public int weaponDamage;
@@ -35,6 +39,9 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
         lastPosition = transform.position;
         _controller = GetComponent<CharacterController>();
         footstepAudioSource = GetComponent<AudioSource>();
+        healthBarRect = healthBar.GetComponent<RectTransform>();
+        //healthBarInitialSize = healthBarRect.localScale.x;
+        hitPointsLeft = hitPointsInitial;
         //_laserLine = GetComponent<LineRenderer>();
     }
 
@@ -152,13 +159,26 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
 
     public void ReceiveDamage(int damage)
     {
-        hitPoints -= damage;
-        if (hitPoints <= 0)
+        hitPointsLeft -= damage;
+
+        Debug.Log(damage);
+        Debug.Log(hitPointsInitial);
+        float percentageDamage = (float) damage / (float) hitPointsInitial;
+
+        Debug.Log(percentageDamage);
+        //healthBar.transform.localScale -= new Vector3(percentageDamage * healthBarInitialSize, 0, 0);
+        //RectTransform healthBarRect = healthBar.GetComponent<RectTransform>();
+        healthBarRect.localScale -= new Vector3(percentageDamage, 0, 0);
+        //print("HP BAR init size is " + healthBarInitialSize);
+        print("PErcentage dmg is " + percentageDamage.ToString());
+        print("HP BAR scale is " + healthBarRect.localScale);
+
+        if (hitPointsLeft <= 0)
         {
             gameObject.SetActive(false);
             //TODO End game:
             print("YOU DIED!!");
         }
-        print("hitpoints left: " + hitPoints);
+        print("hitpoints left: " + hitPointsLeft);
     }
 }
