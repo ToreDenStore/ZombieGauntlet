@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
     private CharacterController _controller;
     Vector3 mousePosition;
     //Vector3 mousePosition2;
+    private AudioSource footstepAudioSource;
+    Vector3 lastPosition;
+    bool isMoving = false;
 
     //Shots
     public GameObject gun;
@@ -29,7 +32,9 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
     // Start is called before the first frame update
     void Start()
     {
+        lastPosition = transform.position;
         _controller = GetComponent<CharacterController>();
+        footstepAudioSource = GetComponent<AudioSource>();
         //_laserLine = GetComponent<LineRenderer>();
     }
 
@@ -55,6 +60,25 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
         float moveVertical = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(moveHorizontal * Speed, 0.0f, moveVertical * Speed);
         _controller.SimpleMove(movement);
+
+        if (transform.position != lastPosition)
+        {
+            isMoving = true;
+            lastPosition = transform.position;
+        } else
+        {
+            isMoving = false;
+        }
+
+        //Play footstep sound
+        if (isMoving && !footstepAudioSource.isPlaying)
+        {
+            footstepAudioSource.Play();
+        }
+        if (!isMoving && footstepAudioSource.isPlaying)
+        {
+            footstepAudioSource.Stop();
+        }
     }
 
     void FaceMouse()
