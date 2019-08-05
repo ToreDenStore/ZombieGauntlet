@@ -7117,7 +7117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72f7e40efcb4c6d4ba462b186fae9c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meshResolution: 0.1
+  meshResolution: 0.5
   viewRadius: 10
   viewAngle: 120
   obstacleMask:
