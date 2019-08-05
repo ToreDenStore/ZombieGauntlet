@@ -11,38 +11,47 @@ public class ZombieController : MonoBehaviour, IAttacks, IDestroyable
     public float moveSpeed;
     public float attackRate;
     public int attackDamage;
+    public float dieEffectSeconds;
+    public float dieEffectForce;
 
     private GameObject player;
     private float nextFire;
+    private Rigidbody rb;
+    private bool isDead = false;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Detect
-        if (Vector3.Distance(transform.position, player.transform.position) < zombieAlertDistance)
+        if (!isDead)
         {
-            TurnTowardsPlayer();
-            //TODO: Alert nearby zombie companions
-            //Move
-            if (Vector3.Distance(transform.position, player.transform.position) > zombieStopDistance)
+            //Detect
+            if (Vector3.Distance(transform.position, player.transform.position) < zombieAlertDistance)
             {
-                MoveTowardsPlayer();
-            }
-            //Attack
-            //print(Vector3.Distance(transform.position, player.transform.position));
-            if (Vector3.Distance(transform.position, player.transform.position) < zombieAttackDistance
-                   && player.activeSelf 
-                   && Time.time > nextFire)
-            {
-                AttackPlayer();
+                TurnTowardsPlayer();
+                //TODO: Alert nearby zombie companions
+                //Move
+                if (Vector3.Distance(transform.position, player.transform.position) > zombieStopDistance)
+                {
+                    MoveTowardsPlayer();
+                }
+                //Attack
+                //print(Vector3.Distance(transform.position, player.transform.position));
+                if (Vector3.Distance(transform.position, player.transform.position) < zombieAttackDistance
+                       && player.activeSelf
+                       && Time.time > nextFire)
+                {
+                    AttackPlayer();
+                }
             }
         }
+
     }
 
     private void AttackPlayer()
@@ -76,8 +85,32 @@ public class ZombieController : MonoBehaviour, IAttacks, IDestroyable
         hitPoints -= damage;
         if (hitPoints <= 0)
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+            Die();
         }
         print("hitpoints left: " + hitPoints);
+    }
+
+    private void Die()
+    {
+        
+        //rb.AddForce(transform.forward * (-10));
+        //rb.im
+        
+        isDead = true;
+
+        StartCoroutine(DieAnimation());
+        //rb.detectCollisions = false;
+        //BoxCollider collider = GetComponent<BoxCollider>();
+        //collider.enabled = false;
+    }
+
+    private IEnumerator DieAnimation()
+    {
+        rb.constraints = RigidbodyConstraints.None;
+        rb.AddForce(transform.forward * -5, ForceMode.Impulse);
+        yield return new WaitForSeconds(dieEffectSeconds);
+        rb.detectCollisions = false;
+        rb.constraints = RigidbodyConstraints.FreezeAll;
     }
 }
