@@ -37,7 +37,7 @@ public class FieldOfView : MonoBehaviour
         for (int i = 0; i <= stepcount; i++)
         {
             float angle = transform.eulerAngles.y - viewAngle/2 + stepAngleSize * i;
-            //Debug.DrawLine(transform.position, transform.position + DirFromAngle(angle, true) * viewRadius, Color.red);
+            Debug.DrawLine(transform.position, transform.position + DirFromAngle(angle, true) * viewRadius, Color.red);
 
             ViewCastInfo newViewCast = ViewCast(angle);
             viewPoints.Add(newViewCast.point);
