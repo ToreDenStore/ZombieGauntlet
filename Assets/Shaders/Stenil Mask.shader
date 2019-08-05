@@ -10,6 +10,7 @@
     SubShader
     {
         Tags { "RenderType"="Opaque" "Queue"="Geometry-100" }
+		ColorMask 0
         LOD 200
 
         CGPROGRAM
