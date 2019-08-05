@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+    This script uses the code from the following series of tutorial videos by Sebastian Lague
+    about implementing a player field-of-view:
+    EP1: https://www.youtube.com/watch?v=rQG9aUWarwE
+    EP2: https://www.youtube.com/watch?reload=9&v=73Dc5JTCmKI
+    EP3: https://www.youtube.com/watch?v=xkcCWqifT9M
+*/
 public class FieldOfView : MonoBehaviour
 {
     public float meshResolution;
