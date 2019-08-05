@@ -14,6 +14,11 @@
 		ZWrite off
         LOD 200
 
+		Stencil {
+			Ref 1
+			Pass replace
+		}
+
         CGPROGRAM
         // Physically based Standard lighting model, and enable shadows on all light types
         #pragma surface surf Standard fullforwardshadows
