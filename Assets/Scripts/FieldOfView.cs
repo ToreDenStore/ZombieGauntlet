@@ -10,6 +10,7 @@ public class FieldOfView : MonoBehaviour
     public float viewAngle;
     public LayerMask obstacleMask;
     public MeshFilter viewMeshFilter;
+    public float maskCutawayDistance;
 
     private Mesh viewMesh;
 
@@ -51,7 +52,7 @@ public class FieldOfView : MonoBehaviour
         vericies[0] = Vector3.zero;
         for (int i = 0; i < vertexCount - 1; i++)
         {
-            vericies[i + 1] = transform.InverseTransformPoint(viewPoints[i]);
+            vericies[i + 1] = transform.InverseTransformPoint(viewPoints[i]) + Vector3.forward * maskCutawayDistance;
 
             if (i < vertexCount - 2)
             {
