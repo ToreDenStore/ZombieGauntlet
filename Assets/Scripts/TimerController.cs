@@ -31,7 +31,7 @@ public class TimerController : MonoBehaviour
             }
         } else
         {
-            DateTime nowTime = new DateTime().AddMinutes(trainLeavesInMinutes).AddSeconds(Mathf.RoundToInt(Time.time) * -1);
+            DateTime nowTime = new DateTime().AddMinutes(trainLeavesInMinutes).AddSeconds(Mathf.RoundToInt(Time.timeSinceLevelLoad) * -1);
             //nowTime doesn't go down below 1 second, could be done better
             UpdateScreenTextWithNewGameTime(nowTime);
         }
