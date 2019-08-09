@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
     public GameController gameController;
 
     public GameObject healthBar;
+    public GameObject diedText;
     public float Speed;
     public int hitPointsInitial;
 
@@ -180,9 +181,13 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
 
     private void Die()
     {
-        gameObject.SetActive(false);
-        print("YOU DIED!!");
-        //TODO: Dying "animation"
-        gameController.LoseGame();
+        if (!diedText.activeSelf)
+        {
+            //TODO: Dying "animation"
+            diedText.SetActive(true);
+            gameObject.SetActive(false);
+            gameController.LoseGame();
+        }
+        
     }
 }
