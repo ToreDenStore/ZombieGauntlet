@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
 {
+    public GameController gameController;
+
     public GameObject healthBar;
     public float Speed;
     public int hitPointsInitial;
@@ -171,10 +173,16 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
 
         if (hitPointsLeft <= 0)
         {
-            gameObject.SetActive(false);
-            //TODO End game:
-            print("YOU DIED!!");
+            Die();
         }
         print("hitpoints left: " + hitPointsLeft);
+    }
+
+    private void Die()
+    {
+        gameObject.SetActive(false);
+        print("YOU DIED!!");
+        //TODO: Dying "animation"
+        gameController.LoseGame();
     }
 }

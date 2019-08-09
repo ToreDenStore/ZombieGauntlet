@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class TimerController : MonoBehaviour
 {
-    //Time
     private string currentTimeDisplayed = "<time>";
     private Text timerText;
-    
+    private GameObject missedTrainText;
+
     public int trainLeavesInMinutes;
     public GameController gameController;
 
@@ -16,6 +16,7 @@ public class TimerController : MonoBehaviour
     void Start()
     {
         timerText = GetComponent<Text>();
+        missedTrainText = transform.Find("MissedTrainText").gameObject;
     }
 
     // Update is called once per frame
@@ -23,12 +24,17 @@ public class TimerController : MonoBehaviour
     {
         if (Time.time >= trainLeavesInMinutes * 60)
         {
-            print("You missed the train!");
-            gameController.loseGame();
+            if (!missedTrainText.activeSelf)
+            {
+                missedTrainText.SetActive(true);
+                gameController.LoseGame();
+            }
+        } else
+        {
+            DateTime nowTime = new DateTime().AddMinutes(trainLeavesInMinutes).AddSeconds(Mathf.RoundToInt(Time.time) * -1);
+            //nowTime doesn't go down below 1 second, could be done better
+            UpdateScreenTextWithNewGameTime(nowTime);
         }
-        DateTime nowTime = new DateTime().AddMinutes(trainLeavesInMinutes).AddSeconds(Mathf.RoundToInt(Time.time) * -1);
-        //nowTime doesn't go down below 1 second, could be done better
-        UpdateScreenTextWithNewGameTime(nowTime);
     }
 
     void UpdateScreenTextWithNewGameTime(DateTime gameTime)
