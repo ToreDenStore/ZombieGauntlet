@@ -15,9 +15,6 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
     private RectTransform healthBarRect;
     private CharacterController _controller;
     private Vector3 mousePosition;
-    private AudioSource footstepAudioSource;
-    private Vector3 lastPosition;
-    private bool isMoving = false;
 
     //Shots
     public GameObject gun;
@@ -34,15 +31,11 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
     private static readonly float _shotEffectLifetime = 2;
     private static readonly float _explosionLifetime = 2;
 
-
     // Start is called before the first frame update
     void Start()
     {
-        lastPosition = transform.position;
         _controller = GetComponent<CharacterController>();
-        footstepAudioSource = GetComponent<AudioSource>();
         healthBarRect = healthBar.GetComponent<RectTransform>();
-        //healthBarInitialSize = healthBarRect.localScale.x;
         hitPointsLeft = hitPointsInitial;
         //_laserLine = GetComponent<LineRenderer>();
     }
@@ -53,21 +46,12 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
         if (!gameController.IsPaused())
         {
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            //mousePosition2 = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-            //print("mouse: " + mousePosition);
-            //print("mouse2: " + mousePosition2);
 
             FaceMouse();
 
             Move();
 
             ShootGun();
-        } else
-        {
-            if (footstepAudioSource.isPlaying)
-            {
-                footstepAudioSource.Stop();
-            }
         }
     }
     
@@ -78,25 +62,6 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
         float moveVertical = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(moveHorizontal * Speed, 0.0f, moveVertical * Speed);
         _controller.SimpleMove(movement);
-
-        if (transform.position != lastPosition)
-        {
-            isMoving = true;
-            lastPosition = transform.position;
-        } else
-        {
-            isMoving = false;
-        }
-
-        //Play footstep sound
-        if (isMoving && !footstepAudioSource.isPlaying)
-        {
-            footstepAudioSource.Play();
-        }
-        if (!isMoving && footstepAudioSource.isPlaying)
-        {
-            footstepAudioSource.Stop();
-        }
     }
 
     void FaceMouse()
@@ -112,11 +77,6 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
 
     void ShootGun()
     {
-        //Vector3 gunPositionViewport = Camera.main.ScreenToViewportPoint(shotSpawn.position);
-
-        //Vector3 gunDirection = mousePosition2 - gunPositionViewport;
-        
-
         if ((Input.GetMouseButtonDown(0) || Input.GetMouseButton(0)) && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
@@ -131,7 +91,6 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
                 0,
                 mousePosition.z - shotSpawn.position.z
             );
-            //print("gun direction: " + gunDirection);
             if (Physics.Raycast(rayOrigin, gunDirection, out hit, weaponRange))
             {
                 //_laserLine.SetPosition(1, hit.point);
@@ -178,14 +137,11 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
 
         Debug.Log(percentageDamage);
         healthBarRect.localScale -= new Vector3(percentageDamage, 0, 0);
-        //print("PErcentage dmg is " + percentageDamage.ToString());
-        //print("HP BAR scale is " + healthBarRect.localScale);
 
         if (hitPointsLeft <= 0)
         {
             Die();
         }
-        //print("hitpoints left: " + hitPointsLeft);
     }
 
     private void Die()
