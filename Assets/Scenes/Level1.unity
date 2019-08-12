@@ -622,7 +622,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &104168531
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1085,7 +1085,7 @@ Light:
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 0.22908556, g: 0.050980408, b: 0.8509804, a: 1}
-  m_Intensity: 0.3
+  m_Intensity: 0.2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2805,7 +2805,7 @@ Light:
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 0.8509804, g: 0.31742185, b: 0.050980408, a: 1}
-  m_Intensity: 0.2
+  m_Intensity: 0.1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
