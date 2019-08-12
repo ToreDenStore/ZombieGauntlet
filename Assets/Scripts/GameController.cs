@@ -40,7 +40,7 @@ public class GameController : MonoBehaviour
     private IEnumerator WaitForSecondsBeforeQuitGame()
     {
         yield return new WaitForSeconds(secondsBeforeQuitGame);
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("MainMenu");
     }
 
 }
