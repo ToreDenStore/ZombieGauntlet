@@ -107,7 +107,8 @@ public class ZombieController : MonoBehaviour, IAttacks, IDestroyable
         {
             Die();
         }
-        print("hitpoints left: " + hitPoints);
+        Alert();
+        //print("hitpoints left: " + hitPoints);
     }
 
     private void Die()
