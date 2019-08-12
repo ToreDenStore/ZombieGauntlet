@@ -44,7 +44,7 @@ public class FieldOfView : MonoBehaviour
         for (int i = 0; i <= stepcount; i++)
         {
             float angle = transform.eulerAngles.y - viewAngle/2 + stepAngleSize * i;
-            Debug.DrawLine(transform.position, transform.position + DirFromAngle(angle, true) * viewRadius, Color.red);
+            //Debug.DrawLine(transform.position, transform.position + DirFromAngle(angle, true) * viewRadius, Color.red);
 
             ViewCastInfo newViewCast = ViewCast(angle);
             viewPoints.Add(newViewCast.point);
@@ -59,7 +59,7 @@ public class FieldOfView : MonoBehaviour
         vericies[0] = Vector3.zero;
         for (int i = 0; i < vertexCount - 1; i++)
         {
-            vericies[i + 1] = transform.InverseTransformPoint(viewPoints[i]) + Vector3.forward * maskCutawayDistance;
+            vericies[i + 1] = transform.InverseTransformPoint(viewPoints[i]) * maskCutawayDistance;
 
             if (i < vertexCount - 2)
             {
@@ -96,6 +96,7 @@ public class FieldOfView : MonoBehaviour
         } else
         {
             return new ViewCastInfo(false, transform.position + dir * viewRadius, viewRadius, globalAngle);
+            //return new ViewCastInfo(false, transform.position, viewRadius, globalAngle);
         }
     }
 
