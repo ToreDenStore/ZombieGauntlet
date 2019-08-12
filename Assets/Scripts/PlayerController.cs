@@ -62,6 +62,12 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
             Move();
 
             ShootGun();
+        } else
+        {
+            if (footstepAudioSource.isPlaying)
+            {
+                footstepAudioSource.Stop();
+            }
         }
     }
     
