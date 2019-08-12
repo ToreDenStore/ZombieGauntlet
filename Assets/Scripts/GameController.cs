@@ -32,12 +32,13 @@ public class GameController : MonoBehaviour
     {
         if (Input.GetKeyDown("escape"))
         {
-            print("Escape pressed");
+            //print("Escape pressed");
             if (!paused)
             {
-                pausedCanvas.SetActive(true);
-                Time.timeScale = 0f;
-                paused = true;
+                PauseGame();
+            } else
+            {
+                ResumeGame();
             }
         }
 
@@ -46,6 +47,13 @@ public class GameController : MonoBehaviour
     public bool isPaused()
     {
         return this.paused;
+    }
+
+    public void PauseGame()
+    {
+        pausedCanvas.SetActive(true);
+        Time.timeScale = 0f;
+        paused = true;
     }
 
     public void ResumeGame()
