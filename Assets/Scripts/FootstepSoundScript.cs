@@ -22,8 +22,8 @@ public class FootstepSoundScript : MonoBehaviour
     {
         if (!gameController.IsPaused())
         {
-            if (Mathf.Abs(transform.position.x - lastPosition.x) > 0.02
-                || Mathf.Abs(transform.position.z - lastPosition.z) > 0.02)
+            if (Mathf.Abs(transform.position.x - lastPosition.x) > 0.03
+                || Mathf.Abs(transform.position.z - lastPosition.z) > 0.03)
             {
                 isMoving = true;
                 lastPosition = transform.position;
