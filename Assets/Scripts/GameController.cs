@@ -35,30 +35,40 @@ public class GameController : MonoBehaviour
             //print("Escape pressed");
             if (!paused)
             {
-                PauseGame();
+                PauseGameButtonClick();
             } else
             {
-                ResumeGame();
+                ResumeGameButtonClick();
             }
         }
 
     }
 
-    public bool isPaused()
+    public bool IsPaused()
     {
         return this.paused;
     }
 
-    public void PauseGame()
+    public void PauseGameButtonClick()
     {
         pausedCanvas.SetActive(true);
+        PauseGame();
+    }
+
+    public void PauseGame()
+    {
         Time.timeScale = 0f;
         paused = true;
     }
 
-    public void ResumeGame()
+    public void ResumeGameButtonClick()
     {
         pausedCanvas.SetActive(false);
+        UnPauseGame();
+    }
+
+    public void UnPauseGame()
+    {
         Time.timeScale = 1f;
         paused = false;
     }
@@ -79,9 +89,18 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public void WinGame()
+    {
+        //Display win game text
+        print("You made it to the train!");
+        StartCoroutine(WaitForSecondsBeforeQuitGame());
+        PauseGame();
+    }
+
     private IEnumerator WaitForSecondsBeforeQuitGame()
     {
-        yield return new WaitForSeconds(secondsBeforeQuitGame);
+        print("Loading new scene in " + secondsBeforeQuitGame + " seconds");
+        yield return new WaitForSecondsRealtime(secondsBeforeQuitGame);
         SceneManager.LoadScene("MainMenu");
     }
 

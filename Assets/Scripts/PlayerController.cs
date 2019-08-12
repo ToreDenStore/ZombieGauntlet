@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
     // Update is called once per frame
     void Update()
     {
-        if (!gameController.isPaused())
+        if (!gameController.IsPaused())
         {
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             //mousePosition2 = Camera.main.ScreenToViewportPoint(Input.mousePosition);
