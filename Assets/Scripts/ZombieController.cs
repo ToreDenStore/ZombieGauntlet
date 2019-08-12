@@ -17,11 +17,14 @@ public class ZombieController : MonoBehaviour, IAttacks, IDestroyable
     private GameObject player;
     private float nextFire;
     private Rigidbody rb;
-    private bool isDead = false;
+
+    private bool isDead;
+    private bool isAlerted;
 
     //Audio
-    //private AudioSource footstepAudioSource;
     public AudioSource attackAudio;
+    public AudioSource alertAudio;
+    public AudioSource deathAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +41,10 @@ public class ZombieController : MonoBehaviour, IAttacks, IDestroyable
             //Detect
             if (Vector3.Distance(transform.position, player.transform.position) < zombieAlertDistance)
             {
+                Alert();
+            }
+
+            if (isAlerted) {
                 TurnTowardsPlayer();
                 //TODO: Alert nearby zombie companions
                 //Move
@@ -58,9 +65,18 @@ public class ZombieController : MonoBehaviour, IAttacks, IDestroyable
 
     }
 
+    private void Alert()
+    {
+        if (!isAlerted)
+        {
+            isAlerted = true;
+            alertAudio.Play();
+        }
+    }
+
     private void AttackPlayer()
     {
-        print("zombie attacks!");
+        //print("zombie attacks!");
         attackAudio.Play();
         nextFire = Time.time + attackRate;
         DoDamage(attackDamage, player.GetComponent<IDestroyable>());
@@ -90,7 +106,6 @@ public class ZombieController : MonoBehaviour, IAttacks, IDestroyable
         hitPoints -= damage;
         if (hitPoints <= 0)
         {
-            //gameObject.SetActive(false);
             Die();
         }
         print("hitpoints left: " + hitPoints);
@@ -98,22 +113,15 @@ public class ZombieController : MonoBehaviour, IAttacks, IDestroyable
 
     private void Die()
     {
-        
-        //rb.AddForce(transform.forward * (-10));
-        //rb.im
-        
         isDead = true;
-
+        deathAudio.Play();
         StartCoroutine(DieAnimation());
-        //rb.detectCollisions = false;
-        //BoxCollider collider = GetComponent<BoxCollider>();
-        //collider.enabled = false;
     }
 
     private IEnumerator DieAnimation()
     {
         rb.constraints = RigidbodyConstraints.None;
-        rb.AddForce(transform.forward * -5, ForceMode.Impulse);
+        rb.AddForce(transform.forward * -1 * dieEffectForce, ForceMode.Impulse);
         yield return new WaitForSeconds(dieEffectSeconds);
         rb.detectCollisions = false;
         rb.constraints = RigidbodyConstraints.FreezeAll;
