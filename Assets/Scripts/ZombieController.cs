@@ -76,7 +76,6 @@ public class ZombieController : MonoBehaviour, IAttacks, IDestroyable
 
     private void AttackPlayer()
     {
-        //print("zombie attacks!");
         attackAudio.Play();
         nextFire = Time.time + attackRate;
         DoDamage(attackDamage, player.GetComponent<IDestroyable>());

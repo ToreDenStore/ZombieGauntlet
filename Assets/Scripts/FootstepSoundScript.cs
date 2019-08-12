@@ -8,7 +8,7 @@ public class FootstepSoundScript : MonoBehaviour
 
     private GameController gameController;
     private Vector3 lastPosition;
-    private bool isMoving = false;
+    private bool isMoving;
 
     // Start is called before the first frame update
     void Start()
@@ -18,15 +18,13 @@ public class FootstepSoundScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (!gameController.IsPaused())
         {
-            if (transform.position.x != lastPosition.x
-                || transform.position.z != lastPosition.z)
+            if (Mathf.Abs(transform.position.x - lastPosition.x) > 0.01
+                || Mathf.Abs(transform.position.z - lastPosition.z) > 0.01)
             {
-                print(transform.position);
-                print(lastPosition);
                 isMoving = true;
                 lastPosition = transform.position;
             }
@@ -38,8 +36,6 @@ public class FootstepSoundScript : MonoBehaviour
             //Play footstep sound
             if (isMoving && !footstepAudioSource.isPlaying)
             {
-                print(isMoving);
-                print("play footstep audio");
                 footstepAudioSource.Play();
             }
             if (!isMoving && footstepAudioSource.isPlaying)

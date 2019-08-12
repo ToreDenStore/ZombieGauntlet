@@ -355,9 +355,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1200139620432783954}
   - component: {fileID: 1200139620432783951}
-  - component: {fileID: 1200139620432783955}
   - component: {fileID: -6965274588206617433}
   - component: {fileID: 6355376538557880191}
+  - component: {fileID: 1200139620432783955}
   m_Layer: 0
   m_Name: ZombieCube
   m_TagString: Untagged
@@ -395,30 +395,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 2.5, z: 1.2}
   m_Center: {x: 0, y: 0.25, z: 0.35}
---- !u!114 &1200139620432783955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200139620432783950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 119eea66b5f6d594bba9d8da27bbb36c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitPoints: 40
-  zombieAlertDistance: 10
-  zombieAttackDistance: 3
-  zombieStopDistance: 2.5
-  moveSpeed: 4
-  attackRate: 1
-  attackDamage: 10
-  dieEffectSeconds: 1
-  dieEffectForce: 5
-  attackAudio: {fileID: 205432370431529760}
-  alertAudio: {fileID: 1832643144743480733}
-  deathAudio: {fileID: 1110355184311711410}
 --- !u!54 &-6965274588206617433
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -448,6 +424,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   footstepAudioSource: {fileID: 1161311490156560879}
+--- !u!114 &1200139620432783955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200139620432783950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 119eea66b5f6d594bba9d8da27bbb36c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 40
+  zombieAlertDistance: 10
+  zombieAttackDistance: 3
+  zombieStopDistance: 2.5
+  moveSpeed: 4
+  attackRate: 1
+  attackDamage: 10
+  dieEffectSeconds: 1
+  dieEffectForce: 5
+  attackAudio: {fileID: 205432370431529760}
+  alertAudio: {fileID: 1832643144743480733}
+  deathAudio: {fileID: 1110355184311711410}
 --- !u!1 &4510369908026698250
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,7 +588,7 @@ GameObject:
   - component: {fileID: 8240677460921631632}
   - component: {fileID: 4157328114449038960}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -899,7 +899,7 @@ GameObject:
   - component: {fileID: 7081890608654065344}
   - component: {fileID: 8666209151208774746}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
