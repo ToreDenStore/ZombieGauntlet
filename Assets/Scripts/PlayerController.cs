@@ -50,16 +50,19 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
     // Update is called once per frame
     void Update()
     {
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //mousePosition2 = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-        //print("mouse: " + mousePosition);
-        //print("mouse2: " + mousePosition2);
-        
-        FaceMouse();
+        if (!gameController.isPaused())
+        {
+            mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //mousePosition2 = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+            //print("mouse: " + mousePosition);
+            //print("mouse2: " + mousePosition2);
 
-        Move();
+            FaceMouse();
 
-        ShootGun();
+            Move();
+
+            ShootGun();
+        }
     }
     
     void Move()
@@ -169,14 +172,14 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
 
         Debug.Log(percentageDamage);
         healthBarRect.localScale -= new Vector3(percentageDamage, 0, 0);
-        print("PErcentage dmg is " + percentageDamage.ToString());
-        print("HP BAR scale is " + healthBarRect.localScale);
+        //print("PErcentage dmg is " + percentageDamage.ToString());
+        //print("HP BAR scale is " + healthBarRect.localScale);
 
         if (hitPointsLeft <= 0)
         {
             Die();
         }
-        print("hitpoints left: " + hitPointsLeft);
+        //print("hitpoints left: " + hitPointsLeft);
     }
 
     private void Die()

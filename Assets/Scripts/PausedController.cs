@@ -1,30 +1,22 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class GameController : MonoBehaviour
+public class PausedController : MonoBehaviour
 {
     /*
      * https://answers.unity.com/questions/811686/how-do-i-toggle-my-pause-menu-with-escape.html 
     */
-    
-    public GameObject pausedCanvas;
-    public int secondsBeforeQuitGame;
 
-    private bool gameLost;
     private bool paused;
 
-    //Music
-    private AudioSource backgroundMusic;
+    public GameObject pausedCanvas;
 
     // Start is called before the first frame update
     void Start()
     {
-        backgroundMusic = GetComponent<AudioSource>();
-        gameLost = false;
+        paused = pausedCanvas.activeSelf;
     }
 
     // Update is called once per frame
@@ -40,12 +32,6 @@ public class GameController : MonoBehaviour
                 paused = true;
             }
         }
-
-    }
-
-    public bool isPaused()
-    {
-        return this.paused;
     }
 
     public void ResumeGame()
@@ -61,20 +47,5 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void LoseGame()
-    {
-        if (!gameLost)
-        {
-            gameLost = true;
-            print("You lost!");
-            StartCoroutine(WaitForSecondsBeforeQuitGame());
-        }
-    }
-
-    private IEnumerator WaitForSecondsBeforeQuitGame()
-    {
-        yield return new WaitForSeconds(secondsBeforeQuitGame);
-        SceneManager.LoadScene("MainMenu");
-    }
 
 }
