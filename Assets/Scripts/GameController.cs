@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     */
     
     public GameObject pausedCanvas;
+    public GameObject winCanvas;
     public int secondsBeforeQuitGame;
 
     private bool gameLost;
@@ -93,6 +94,7 @@ public class GameController : MonoBehaviour
     {
         //Display win game text
         print("You made it to the train!");
+        winCanvas.SetActive(true);
         StartCoroutine(WaitForSecondsBeforeQuitGame());
         PauseGame();
     }
