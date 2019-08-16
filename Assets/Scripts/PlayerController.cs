@@ -8,7 +8,8 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
 
     public GameObject healthBar;
     public GameObject diedText;
-    public float Speed;
+    public float speed;
+    public float speedBackwards;
     public int hitPointsInitial;
 
     private int hitPointsLeft;
@@ -60,8 +61,27 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
         //Movement
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
-        Vector3 movement = new Vector3(moveHorizontal * Speed, 0.0f, moveVertical * Speed);
-        _controller.SimpleMove(movement);
+        float moveSpeed = 0;
+        Vector3 movementAngle = new Vector3(moveHorizontal, 0, moveVertical);
+        if (movementAngle != Vector3.zero)
+        {
+            if (Mathf.Abs(Vector3.Angle(transform.forward, movementAngle)) <= 90)
+            {
+                print("moving forward");
+                moveSpeed = speed;
+            }
+            else
+            {
+                print("moving backwards");
+                moveSpeed = speedBackwards;
+            }
+            Vector3 movement = movementAngle * moveSpeed;
+            _controller.SimpleMove(movement);
+        }
+        else
+        {
+            print("not moving");
+        }
     }
 
     void FaceMouse()

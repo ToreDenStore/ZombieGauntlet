@@ -14889,7 +14889,8 @@ MonoBehaviour:
   gameController: {fileID: 762424766}
   healthBar: {fileID: 557224860}
   diedText: {fileID: 134043052}
-  Speed: 5
+  speed: 5
+  speedBackwards: 3
   hitPointsInitial: 100
   gun: {fileID: 987936069}
   shotAudio: {fileID: 6789968279565048724, guid: aabb9d2c1b9aae84b9f8bf0615f9df69,
