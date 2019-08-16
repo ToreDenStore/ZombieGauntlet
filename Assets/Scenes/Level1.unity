@@ -1319,7 +1319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &104168531
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2446,7 +2446,7 @@ Light:
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 0.22908556, g: 0.050980408, b: 0.8509804, a: 1}
-  m_Intensity: 2
+  m_Intensity: 0.3
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5270,7 +5270,7 @@ Light:
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 0.8509804, g: 0.31742185, b: 0.050980408, a: 1}
-  m_Intensity: 2
+  m_Intensity: 0.1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -15907,7 +15907,7 @@ Transform:
   - {fileID: 1121301750}
   - {fileID: 83449129}
   m_Father: {fileID: 1869436957}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1348586243
 PrefabInstance:
@@ -17275,6 +17275,10 @@ PrefabInstance:
     - target: {fileID: 1686006487339004, guid: db905c506a032b048aca124f566d950e, type: 3}
       propertyPath: m_Name
       value: Warehouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 1686006487339004, guid: db905c506a032b048aca124f566d950e, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4995977089233354, guid: db905c506a032b048aca124f566d950e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22336,8 +22340,8 @@ Transform:
   m_Children:
   - {fileID: 1443281175}
   - {fileID: 465799082}
-  - {fileID: 1088682188}
   - {fileID: 1339276201}
+  - {fileID: 1088682188}
   - {fileID: 1511295036}
   m_Father: {fileID: 1435444476}
   m_RootOrder: 6
