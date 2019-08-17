@@ -21,6 +21,8 @@ public class ZombieController : MonoBehaviour, IAttacks, IDestroyable
     private bool isDead;
     private bool isAlerted;
 
+    private float size = 1;
+
     //Audio
     public AudioSource attackAudio;
     public AudioSource alertAudio;
@@ -31,6 +33,12 @@ public class ZombieController : MonoBehaviour, IAttacks, IDestroyable
     {
         player = GameObject.FindWithTag("Player");
         rb = GetComponent<Rigidbody>();
+
+        size = Random.Range(0.7f, 1.3f);
+        transform.localScale = transform.localScale * size;
+        attackDamage = Mathf.RoundToInt(attackDamage * size);
+        moveSpeed = moveSpeed / size;
+        hitPoints = Mathf.RoundToInt(hitPoints * size);
     }
 
     // Update is called once per frame
