@@ -59,7 +59,8 @@ public class FieldOfView : MonoBehaviour
         vericies[0] = Vector3.zero;
         for (int i = 0; i < vertexCount - 1; i++)
         {
-            vericies[i + 1] = transform.InverseTransformPoint(viewPoints[i]) * maskCutawayDistance;
+            vericies[i + 1] = transform.InverseTransformPoint(viewPoints[i])
+                + transform.InverseTransformPoint(viewPoints[i]).normalized * maskCutawayDistance;
 
             if (i < vertexCount - 2)
             {
