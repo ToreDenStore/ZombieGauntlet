@@ -40,8 +40,8 @@ public class FootstepSoundScript : MonoBehaviour
                     Vector3.Distance(transform.position, lastPosition) > 0.2
                     )
                 {
-                    print(transform.position);
-                    print(lastPosition);
+                    //print(transform.position);
+                    //print(lastPosition);
                     isMoving = true;
                     lastPosition = transform.position;
                 }
@@ -54,12 +54,12 @@ public class FootstepSoundScript : MonoBehaviour
                 if (isMoving && !footstepAudioSource.isPlaying && Time.timeSinceLevelLoad >= 1)
                 {
                     footstepAudioSource.Play();
-                    print("start play footsteps");
+                    //print("start play footsteps");
                 }
                 if (!isMoving && footstepAudioSource.isPlaying)
                 {
                     footstepAudioSource.Stop();
-                    print("stop play footsteps");
+                    //print("stop play footsteps");
                 }
             }
             else
