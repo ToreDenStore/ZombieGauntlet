@@ -16,7 +16,7 @@ public class TimerController : MonoBehaviour
     void Start()
     {
         timerText = GetComponent<Text>();
-        missedTrainText = transform.Find("MissedTrainText").gameObject;
+        missedTrainText = transform.Find("MissedVehicleText").gameObject;
     }
 
     // Update is called once per frame
