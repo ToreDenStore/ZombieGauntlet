@@ -22,11 +22,11 @@ public class FootstepSoundScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         thisTime = Time.timeSinceLevelLoad;
 
-        if ((thisTime - lastTime) / Time.fixedDeltaTime > 10)
+        if ((thisTime - lastTime) / Time.deltaTime > 10)
         {
             lastTime = thisTime;
 
