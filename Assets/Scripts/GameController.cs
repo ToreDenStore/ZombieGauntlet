@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     
     public GameObject pausedCanvas;
     public GameObject winCanvas;
+    public GameObject viewMask;
     public int secondsBeforeQuitGame;
 
     private bool gameLost;
@@ -26,6 +27,7 @@ public class GameController : MonoBehaviour
     {
         backgroundMusic = GetComponent<AudioSource>();
         gameLost = false;
+        viewMask.SetActive(false);
     }
 
     // Update is called once per frame

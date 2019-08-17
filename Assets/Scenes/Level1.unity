@@ -1319,7 +1319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &104168531
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9369,6 +9369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pausedCanvas: {fileID: 1808045940}
   winCanvas: {fileID: 1628014192}
+  viewMask: {fileID: 104168530}
   secondsBeforeQuitGame: 3
 --- !u!1001 &765034750
 PrefabInstance:
