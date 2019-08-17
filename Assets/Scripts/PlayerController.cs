@@ -67,12 +67,12 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
         {
             if (Mathf.Abs(Vector3.Angle(transform.forward, movementAngle)) <= 90)
             {
-                print("moving forward");
+                //print("moving forward");
                 moveSpeed = speed;
             }
             else
             {
-                print("moving backwards");
+                //print("moving backwards");
                 moveSpeed = speedBackwards;
             }
             Vector3 movement = movementAngle * moveSpeed;
@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour, IAttacks, IDestroyable
         }
         else
         {
-            print("not moving");
+            //print("not moving");
         }
     }
 
