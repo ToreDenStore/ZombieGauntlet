@@ -18045,14 +18045,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72f7e40efcb4c6d4ba462b186fae9c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meshResolution: 0.5
+  meshResolution: 1
   viewRadius: 15
   viewAngle: 360
   obstacleMask:
     serializedVersion: 2
     m_Bits: 512
   viewMeshFilter: {fileID: 1494012276}
-  maskCutawayDistance: 0.5
+  maskCutawayDistance: 1
+  edgeResolveIterations: 4
+  edgeDistanceThreshold: 1
 --- !u!114 &1425060500
 MonoBehaviour:
   m_ObjectHideFlags: 0

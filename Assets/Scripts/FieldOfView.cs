@@ -18,6 +18,8 @@ public class FieldOfView : MonoBehaviour
     public LayerMask obstacleMask;
     public MeshFilter viewMeshFilter;
     public float maskCutawayDistance;
+    public int edgeResolveIterations;
+    public float edgeDistanceThreshold;
 
     private Mesh viewMesh;
 
@@ -39,18 +41,43 @@ public class FieldOfView : MonoBehaviour
     {
         int stepcount = Mathf.RoundToInt(viewAngle * meshResolution);
         float stepAngleSize = viewAngle / stepcount;
-
         List<Vector3> viewPoints = new List<Vector3>();
+        ViewCastInfo oldViewCast = new ViewCastInfo();
+
         for (int i = 0; i <= stepcount; i++)
         {
             float angle = transform.eulerAngles.y - viewAngle/2 + stepAngleSize * i;
-            //Debug.DrawLine(transform.position, transform.position + DirFromAngle(angle, true) * viewRadius, Color.red);
-
+            
             ViewCastInfo newViewCast = ViewCast(angle);
-            viewPoints.Add(newViewCast.point);
+            //Debug.DrawLine(transform.position, newViewCast.point, Color.blue);
 
+            if (i > 0)
+            {
+                bool edgeDistanceThresholdExceeded = Mathf.Abs(oldViewCast.distance - newViewCast.distance) > edgeDistanceThreshold;
+                if (oldViewCast.hit != newViewCast.hit || (oldViewCast.hit && newViewCast.hit && edgeDistanceThresholdExceeded))
+                {
+                    EdgeInfo edge = FindEdge(oldViewCast, newViewCast);
+                    //Debug.DrawLine(transform.position, oldViewCast.point, Color.blue);
+                    //Debug.DrawLine(transform.position, newViewCast.point, Color.blue);
+                    if (edge.pointA != Vector3.zero)
+                    {
+                        //print("Adding angle");
+                        viewPoints.Add(edge.pointA);
+                        //Debug.DrawLine(transform.position, edge.pointA, Color.red);
+                    }
+                    if (edge.pointB != Vector3.zero)
+                    {
+                        //print("Adding angle");
+                        viewPoints.Add(edge.pointB);
+                        //Debug.DrawLine(transform.position, edge.pointB, Color.green);
+                    }
+                }
+            }
+            viewPoints.Add(newViewCast.point);
+            oldViewCast = newViewCast;
             //print("Drawing line from " + transform.position + " to " + transform.position + DirFromAngle(angle, true) * viewRadius);
         }
+        //print(viewPoints.Count);
 
         int vertexCount = viewPoints.Count + 1; //1 extra for origin point
         Vector3[] vericies = new Vector3[vertexCount];
@@ -59,6 +86,7 @@ public class FieldOfView : MonoBehaviour
         vericies[0] = Vector3.zero;
         for (int i = 0; i < vertexCount - 1; i++)
         {
+            //Debug.DrawLine(transform.position, viewPoints[i], Color.yellow);
             vericies[i + 1] = transform.InverseTransformPoint(viewPoints[i])
                 + transform.InverseTransformPoint(viewPoints[i]).normalized * maskCutawayDistance;
 
@@ -101,6 +129,40 @@ public class FieldOfView : MonoBehaviour
         }
     }
 
+    EdgeInfo FindEdge(ViewCastInfo minViewCast, ViewCastInfo maxViewCast)
+    {
+        float minAngle = minViewCast.angle;
+        float maxAngle = maxViewCast.angle;
+        Vector3 minPoint = Vector3.zero;
+        Vector3 maxPoint = Vector3.zero;
+
+        //print("Angle min: " + minAngle);
+        //print("Angle max: " + maxAngle);
+
+        for (int i = 0; i < edgeResolveIterations; i++)
+        {
+            float angle = (minAngle + maxAngle) / 2;
+            ViewCastInfo newViewCast = ViewCast(angle);
+
+            //print("Distance: " + Mathf.Abs(minViewCast.distance - maxViewCast.distance));
+            bool edgeDistanceThresholdExceeded = Mathf.Abs(minViewCast.distance - newViewCast.distance) > edgeDistanceThreshold;
+            if (newViewCast.hit == minViewCast.hit && !edgeDistanceThresholdExceeded)
+            {
+                minAngle = angle;
+                minPoint = newViewCast.point;
+            } else
+            {
+                maxAngle = angle;
+                maxPoint = newViewCast.point;
+            }
+        }
+
+        //print("Angle end min: " + minAngle);
+        //print("Angle end max: " + maxAngle);
+
+        return new EdgeInfo(minPoint, maxPoint);
+    }
+
     public struct ViewCastInfo
     {
         public bool hit;
@@ -114,6 +176,18 @@ public class FieldOfView : MonoBehaviour
             point = _point;
             distance = _distance;
             angle = _angle;
+        }
+    }
+
+    public struct EdgeInfo
+    {
+        public Vector3 pointA;
+        public Vector3 pointB;
+
+        public EdgeInfo(Vector3 _pointA, Vector3 _pointB)
+        {
+            pointA = _pointA;
+            pointB = _pointB;
         }
     }
 }
